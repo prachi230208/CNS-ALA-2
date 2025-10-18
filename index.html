@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALA 2 CNS</title>
+  <style>
+    /* Reset and base styling */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #0d1b2a;
+      color: #ffffff;
+      text-align: center;
+    }
+
+    /* Navigation bar */
+    nav {
+      background-color: #1b263b;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+    }
+
+    nav .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: #00bfa5;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+
+    nav ul li a:hover {
+      color: #00bfa5;
+    }
+
+    /* Main section */
+    .main {
+      margin-top: 100px;
+      padding: 20px;
+    }
+
+    .main h1 {
+      font-size: 2.5rem;
+      color: #00bfa5;
+    }
+
+    .main p {
+      color: #d3d3d3;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin: 20px auto;
+      line-height: 1.5;
+    }
+
+    /* Buttons */
+    .btn-group {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      padding: 12px 30px;
+      border: none;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .btn-sim {
+      background-color: #00bfa5;
+      color: white;
+    }
+
+    .btn-sim:hover {
+      background-color: #009d88;
+    }
+
+    .btn-report {
+      background-color: transparent;
+      color: #00bfa5;
+      border: 2px solid #00bfa5;
+    }
+
+    .btn-report:hover {
+      background-color: #00bfa5;
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        text-align: center;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .main h1 {
+        font-size: 2rem;
+      }
+      .btn-group {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  
+
+  <!-- Main Section -->
+  <div class="main">
+    <h1>“Network Security Simulation”</h1>
+    <p>
+      Explore interactive malware simulations and understand the behavior of Viruses,
+      Worms, and Trojan Horses in a safe virtual environment.
+    </p>
+
+    <div class="btn-group">
+      <button class="btn btn-sim" onclick="window.location.href='simulatore.html'">Go to Simulation</button>
+      <a href="report.pdf" download>
+        <button class="btn btn-report">Download Report</button>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

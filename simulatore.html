@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pythium — Malware Behavior Simulator (Safe Demo)</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div class="logo">Pythium<span class="dot">•</span></div>
+      <h1 class="title">Malware Behavior Simulator — Visual, Safe, Educational</h1>
+      <p class="subtitle">Watch Viruses, Worms, and Trojans dance across a digital garden — simulated only.</p>
+    </header>
+
+    <section class="controls">
+      <div class="control-row">
+        <label>Mode
+          <select id="mode">
+            <option value="virus">Virus (contact spread)</option>
+            <option value="worm">Worm (self-replicating)</option>
+            <option value="trojan">Trojan (disguised)</option>
+            <option value="mixed">Mixed (all behaviours)</option>
+          </select>
+        </label>
+
+        <label>Agents
+          <input id="agentCount" type="range" min="20" max="400" value="120" />
+          <output id="agentCountOut">120</output>
+        </label>
+
+        <label>Infectivity
+          <input id="infectivity" type="range" min="0" max="1" step="0.01" value="0.35" />
+          <output id="infectivityOut">0.35</output>
+        </label>
+
+        <label>Replicate rate
+          <input id="replicate" type="range" min="0" max="1" step="0.01" value="0.12" />
+          <output id="replicateOut">0.12</output>
+        </label>
+
+        <label>Recovery rate
+          <input id="recovery" type="range" min="0" max="1" step="0.01" value="0.02" />
+          <output id="recoveryOut">0.02</output>
+        </label>
+      </div>
+
+      <div class="buttons">
+        <button id="startBtn" class="btn">Start</button>
+        <button id="pauseBtn" class="btn alt">Pause</button>
+        <button id="resetBtn" class="btn ghost">Reset</button>
+        <button id="seedBtn" class="btn tiny">Seed Infection</button>
+        <a id="openReportLink" class="btn report" href="report.pdf" target="_blank" rel="noopener">Open Report</a>
+
+      </div>
+
+      <div class="info">
+        <div><strong>Legend:</strong> <span class="legend healthy">Healthy</span> <span class="legend infected">Infected</span> <span class="legend recovered">Recovered</span> <span class="legend trojan">Trojan (hidden)</span></div>
+      </div>
+    </section>
+
+    <section class="sim">
+      <canvas id="simCanvas"></canvas>
+      <aside class="stats">
+        <h3>Simulation Stats</h3>
+        <div id="statsList" class="stats-list">
+          <div>Tick: <span id="tick">0</span></div>
+          <div>Total agents: <span id="total">0</span></div>
+          <div>Healthy: <span id="healthy">0</span></div>
+          <div>Infected: <span id="infected">0</span></div>
+          <div>Recovered: <span id="recovered">0</span></div>
+        </div>
+        <hr />
+        <p class="note">This is only a **visual model** — parameters map to abstract behavior, not real exploits.</p>
+      </aside>
+    </section>
+
+    <footer class="credits">
+      <p>Made for learning — observe, analyze, write your report. ✨</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>  in this make better and put a button download report and open malware report.pdf 
